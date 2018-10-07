@@ -15,20 +15,20 @@ Framework:
 
 ## Utilties
 
-## Spreadsheet
+Spreadsheet
 
 * [React spreadsheet](https://github.com/felixrieseberg/React-Spreadsheet-Component)
 
-## PDF
+PDF
 
 * [GROBID](https://github.com/kermitt2/grobid) - ml library to extracting raw documents such as PDF.
 * [tabula-java](https://github.com/tabulapdf/tabula-java) -  extracting tables from PDF files.
 
-## Charts
+Charts
 
 * [d3-china-map](https://github.com/clemsos/d3-china-map)
 
-## Misc
+Misc
 
 * [Ruby GeoPattern](https://github.com/jasonlong/geo_pattern) - ruby library generating tiling SVG patterns from a string.
 * [JS GeoPattern](https://github.com/btmills/geopattern) - js port of the Ruby version.
@@ -38,31 +38,31 @@ Framework:
 
 ## Framework/platform
 
-## App
+App
 
 * [wepy](https://github.com/Tencent/wepy) - wexin app framework.
 
-## Communication
+Communication
 
 * [synapse](https://github.com/matrix-org/synapse) - distributed chat room.
 * [discourse](https://github.com/discourse/discourse) - BBS built in Ruby.
 
-### Presentation
+Presentation
 
 * [reveal](https://github.com/hakimel/reveal.js) - presentation using HTML.
 * [slate](https://github.com/ianstormtaylor/slate) - customizable, collaborative markdown editor.
 
-## Knowledge Management
+Knowledge Management
 
 * [outline](https://github.com/outline/outline) - wiki & knowledge base.
 * [crowducate](https://github.com/Crowducate/crowducate-platform) - crowd education platform in meteor.
 
-### Scraping
+Scraping
 
 * [yakuza](https://github.com/dennishu001/yakuza) - scraping framework.
 * [web sraping](https://github.com/dennishu001/awesome-web-scraping)
 
-### Server
+Server
 
 * [sandstorm](https://github.com/dennishu001/sandstorm) - self-hostable web productivity suite.
 * [Reaction Commerce](https://github.com/reactioncommerce/reaction) - real-time reactive commerce platform built with JavaScript (ES6).
@@ -78,12 +78,12 @@ Framework:
 
 ## Knowledge base
 
-## Node.js
+Node.js
 
 * [hackathon-starter](https://github.com/sahat/hackathon-starter) - A boilerplate for Node.js web applications.
 * [node-interview](https://github.com/ElemeFE/node-interview/blob/master/sections/en-us/common.md) - fundamental node.js.
 
-## Awesome lists
+Awesome lists
 
 * [The Art 0f Command Line](https://github.com/jlevy/the-art-of-command-line)
 * [awesome quant](https://github.com/wilsonfreitas/awesome-quant)
