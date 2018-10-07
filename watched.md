@@ -13,6 +13,11 @@ Framework:
 * [mpvue](https://github.com/Meituan-Dianping/mpvue) - use Vue.js to develop Wexin app.
 * [mpvue-weui](https://github.com/KuangPF/mpvue-weui) - weui based on mpvue.
 
+## Meteor
+
+* [asteriod](https://github.com/mondora/asteroid) - js client to connect to Meteor backend.
+* [awesome-meteor](https://github.com/Urigo/awesome-meteor)
+
 ## Utilties
 
 Spreadsheet
@@ -56,6 +61,7 @@ Knowledge Management
 
 * [outline](https://github.com/outline/outline) - wiki & knowledge base.
 * [crowducate](https://github.com/Crowducate/crowducate-platform) - crowd education platform in meteor.
+* [Adapt](https://github.com/adaptlearning/adapt_framework) - e-learning content authoring tool.
 
 Scraping
 
@@ -69,12 +75,21 @@ Server
 * [Coder Mania](https://github.com/jlevy/the-art-of-command-line) - learning to code interactively built with Meteor.js.
 * [Docusaurus](https://github.com/facebook/Docusaurus) - documentation websites.
 
+Coding
+
+* [CodeSandbox](https://github.com/CompuIves/codesandbox-client) - online web app editor.
+
 ## Machine learning
 
 * [neurojs](https://github.com/janhuenermann/neurojs) - deep learning in browser.
 * [convent](https://github.com/karpathy/convnetjs) - CNN in browser.
 * [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
 * [Atari Deep Q Learner](https://github.com/kuz/DeepMind-Atari-Deep-Q-Learner)
+* [News list](https://github.com/basicmi/AI-Chip-List)
+
+## Finance
+
+* [PGPortfoli](https://github.com/ZhengyaoJiang/PGPortfolio) - deep reinforcement learning portfolio management.
 
 ## Knowledge base
 
@@ -83,7 +98,13 @@ Node.js
 * [hackathon-starter](https://github.com/sahat/hackathon-starter) - A boilerplate for Node.js web applications.
 * [node-interview](https://github.com/ElemeFE/node-interview/blob/master/sections/en-us/common.md) - fundamental node.js.
 
+JS
+
+* [js algorithms](https://github.com/trekhleb/javascript-algorithms)
+
 Awesome lists
 
+* [Awesome](https://github.com/sindresorhus/awesome)
 * [The Art 0f Command Line](https://github.com/jlevy/the-art-of-command-line)
 * [awesome quant](https://github.com/wilsonfreitas/awesome-quant)
+* [Self-hosted](https://github.com/Kickball/awesome-selfhosted)
