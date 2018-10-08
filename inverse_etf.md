@@ -1,8 +1,6 @@
-# Investing
+# List of Inverse ETFs
 
-## Short sale vehicles
-
-### [List of Inverse ETFs](https://www.stocktrader.com/inverse-short-etfs-bearish-etf-funds/)
+https://www.stocktrader.com/inverse-short-etfs-bearish-etf-funds/
 
 Short (1x), UltraShort (2x), UltraPro (3x) MarketCap ETFs:
 
