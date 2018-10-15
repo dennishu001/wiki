@@ -35,6 +35,10 @@ Charts
 
 * [d3-china-map](https://github.com/clemsos/d3-china-map)
 
+Push notification
+
+* [Push.js](https://github.com/Nickersoft/push.js) - desktop browser notification framework.
+
 Misc
 
 * [Ruby GeoPattern](https://github.com/jasonlong/geo_pattern) - ruby library generating tiling SVG patterns from a string.
