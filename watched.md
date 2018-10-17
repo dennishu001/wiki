@@ -46,6 +46,7 @@ Misc
 * [jsdiff](https://github.com/kpdecker/jsdiff) - js text differencing.
 * [bullshit](https://github.com/sebpearce/bullshit) - new age bullshit generator.
 * [tweet analyzer](https://github.com/x0rz/tweets_analyzer) - python script to analyze a Twitter profile.
+* [Node sandbox](https://github.com/patriksimek/vm2#cross-sandbox-relationships)
 
 ## Framework/platform
 
