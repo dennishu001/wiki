@@ -1,11 +1,21 @@
 # Interesting Sites
 
-Sites worth checkout.
+Sites not used frequently but worth bookmark.
+
+## Web
+
+* [PWA google guide](https://developers.google.com/web/progressive-web-apps/)
+* [Nuxt PWA module](https://pwa.nuxtjs.org/modules/workbox)
+
+## Resources
+
+* [Gutenberg](http://www.gutenberg.org/) - free e-books.
+* [World bank data](https://datahelpdesk.worldbank.org/knowledgebase/articles/889386-developer-information-overview) - developer guide.
+
 
 ## Fun
 
-* [Root Clain](https://www.rootclaim.com/) - claim debates.
-* [Gutenberg](http://www.gutenberg.org/) - free e-books.
+* [Root Claim](https://www.rootclaim.com/) - claim debates.
 * [Linear regression generate](https://beta.observablehq.com/@tmcw/bring-your-own-doodles-linear-regression) - interactive linear regression.
 * [rsync](https://rsync.samba.org/) - open source incremental file transfer utility.
 
