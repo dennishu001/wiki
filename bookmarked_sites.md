@@ -43,3 +43,7 @@ Sites not used frequently but worth bookmark.
 * [向日葵保险](https://www.xiangrikui.com/)
 * [SigFig](https://www.sigfig.com/site/#/home/am) - online investment adivsor.
 * [crenchbase](https://www.crunchbase.com/#/home/index) - funding community.
+* [Sentieo](https://resources.sentieo.com) - Google forfinancial documents.
+* [Portfolio Visualizer](https://www.portfoliovisualizer.com/optimize-portfolio)
+* [Yahoo Screener](https://finance.yahoo.com/industry/Auto_Manufacturers_Major)
+* [HK exchange news](http://www.hkexnews.hk/index_c.htm)
