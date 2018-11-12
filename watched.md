@@ -94,6 +94,7 @@ Coding
 * [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning)
 * [Atari Deep Q Learner](https://github.com/kuz/DeepMind-Atari-Deep-Q-Learner)
 * [News list](https://github.com/basicmi/AI-Chip-List)
+* [tl-GAN face](https://github.com/SummitKwan/transparent_latent_gan)
 
 ## Finance
 
