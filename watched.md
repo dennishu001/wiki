@@ -36,9 +36,10 @@ Charts
 * [d3-china-map](https://github.com/clemsos/d3-china-map)
 * [owid-grapher](https://github.com/owid/owid-grapher) - Our World In Data data and grapher.
 
-Push notification
+Communication
 
 * [Push.js](https://github.com/Nickersoft/push.js) - desktop browser notification framework.
+* [Cabin](https://github.com/GetStream/stream-react-example) - socail network build in React and Redux.
 
 Misc
 
@@ -59,6 +60,7 @@ Communication
 
 * [synapse](https://github.com/matrix-org/synapse) - distributed chat room.
 * [discourse](https://github.com/discourse/discourse) - BBS built in Ruby.
+* [mastodon](self-hosted, globally interconnected microblogging community) - self-hosted social network.
 
 Presentation
 
