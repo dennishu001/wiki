@@ -8,6 +8,12 @@ Components:
 * [vddl](https://github.com/hejianxian/vddl) - drap & drop list.
 * [vue-emoji](https://github.com/rishiqing/vue-emoji)
 * [vue2-editor](https://github.com/davidroyer/vue2-editor) - editor using vue and quill.
+* - vue-protal
+* - vue-clickaway
+* - vuesax
+* - vue-the-mask
+* - vuex-crud
+* - vue-offline
 
 Framework:
 
