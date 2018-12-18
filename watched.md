@@ -56,6 +56,7 @@ Misc
 * [bullshit](https://github.com/sebpearce/bullshit) - new age bullshit generator.
 * [tweet analyzer](https://github.com/x0rz/tweets_analyzer) - python script to analyze a Twitter profile.
 * [Node sandbox](https://github.com/patriksimek/vm2#cross-sandbox-relationships)
+* [Online Epub reader](https://github.com/futurepress/epub.js/) - rendering ePub documents in the browser, across many devices.
 
 ## Framework/platform
 
