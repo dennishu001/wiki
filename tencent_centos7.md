@@ -89,3 +89,11 @@ $ vim /etc/fstab // config to make it permanent
 ```
 
 Reference: https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-centos-7
+
+## MongoDb
+
+Follow the official install document - https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-red-hat/
+
+The repo file may include yum variables like $releasever. If incorrect variable value causes problem, we can just replace it with hard value, like 7 for centos 7, etc.
+
+Ref: [How to view yum variables](https://unix.stackexchange.com/questions/19701/yum-how-can-i-view-variables-like-releasever-basearch-yum0)
