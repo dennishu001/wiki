@@ -25,8 +25,10 @@ List all users
 
 1. Login as normal user from PuTTY.
 2. Create public keys.
+
   ```
   # mkdir ~/.ssh
   # chmod 0700 ~/.ssh
   ```
+  
 3. Setup PuTTY profile.
