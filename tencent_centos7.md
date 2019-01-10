@@ -171,9 +171,8 @@ $ chmod 600 ~/.ssh/config
 ```
 # Keep site wide ssh alive. See - https://patrickmn.com/aside/how-to-keep-alive-ssh-sessions/
 $ vim /etc/ssh/sshd_config
-  Host *
-    ServerAliveInterval 300 // 5 min
-    ServerAliveCountMax <3>
+ClientAliveInterval 300 // 5 min
+ClientAliveCountMax 3 // number
 ```
 
 4. Enable autossh
@@ -185,6 +184,14 @@ $ autossh -M(monitor) 0(disable) -f(handle following ssh options) -L <27017>:loc
 ```
 
 Add the autossh command line to `/tec/rc.d/rc.local` to config it to run on start. However, it will run as root by default. We should add the remote host to root's known_hosts, or add su - <user> to run as specified user.
+
+## MySQL
+
+**Troubleshooting**
+
+* When ssh tunnel to mysql server, we may not be able to use default mysql.socks to connect to forwarded server, use -h 127.0.0.1 to specify the host.
+* We may need to add the local ip to user table. See - https://stackoverflow.com/questions/19101243/error-1130-hy000-host-is-not-allowed-to-connect-to-this-mysql-server
+
 
 ## Useful commands
 
