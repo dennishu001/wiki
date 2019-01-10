@@ -12,19 +12,25 @@ show free disk space - `# df -h`
 
 ## Create New user
 
-1. Add group - `# groupadd <group-name>`
-2. Add user to group - `# useradd -G <group> <username(dennis)>`
-3. Add user to sudo group - `# usermod -aG wheel <user>` or `#gpasswd -a <user> wheel`
+```
+# Add group
+$ groupadd <group-name>
 
-Show user info:
-```
-# id <user>
+# Add user to group
+$ useradd -G <group> <username(dennis)>
+$ passwd <user>
+
+# Add user to sudo group 
+$ usermod -aG wheel <user> // or:
+$ gpasswd -a <user> wheel
+
+# Show user info
+$ id <user>
+
+# List all users
+$ cat /etc/passwd
 ```
 
-List all users
-```
-# cat /etc/passwd
-```
 ## Enable SSH login
 
 1. Login as normal user from PuTTY.
