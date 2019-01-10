@@ -94,6 +94,35 @@ Reference: https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-c
 
 Follow the official install document - https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-red-hat/
 
+Need to config selinux if enabled. Check selinux:
+
+```
+$ cat /etc/sysconfig/selinux
+```
+
+Set THP to 'never' to improve performance - http://docs.mongodb.org/manual/reference/transparent-huge-pages/#transparent-huge-pages-thp-settings
+
+> Defrag may appeared to be <always> even when enabled is set to <never>. This can be safely ignored - https://jira.mongodb.org/browse/SERVER-18989
+
+**Troubleshooting**
+
+After installation, check service status, whether configured to run on start.
+
 The repo file may include yum variables like $releasever. If incorrect variable value causes problem, we can just replace it with hard value, like 7 for centos 7, etc.
 
-Ref: [How to view yum variables](https://unix.stackexchange.com/questions/19701/yum-how-can-i-view-variables-like-releasever-basearch-yum0)
+To view yum variables - https://unix.stackexchange.com/questions/19701/yum-how-can-i-view-variables-like-releasever-basearch-yum0
+
+## Useful commands
+
+Services
+
+```
+$ systemctl [status|start|stop|restart] <service>
+$ systemctl enable <service>
+$ systemctl disable <service>
+$ systemctl list-unit-files | grep enabled
+$ chkconfig [--level <level>] <service> <on|off>
+$ chkconfig --list // view services configured to run on start
+```
+
+
