@@ -124,7 +124,8 @@ $ ssh-keygen -t rsa
 $ chmod 700 ~/.ssh // most likely already done
 $ chmod 600 ~/.ssh/id_rsa
 
-# Download and then upload the public key (id_rsa.pub) to the server (as the user will be connected) and add to the authorized_keys file
+# Download and then upload the public key (id_rsa.pub) to the server 
+# (as the user will be connected) and add to the authorized_keys file.
 $ cat id_rsa.pub >> ~/.ssh/authorized_keys
 # Alternatively, we can copy/pasted the public key the the authorized_keys file.
 
@@ -136,10 +137,13 @@ $ chmod 600 ~/.ssh/authorized_keys
 $ restorecon -Rv ~/.ssh
 ```
 
-2. Manually ssh to server
+2. Add remote host to known_hosts
 
 ```
-# The remote host must be added to known_hosts. It will be permantently added the first time you ssh to the server.
+# Add remote to known_hosts for user
+$ ssh-keyscan <new_host_address> >> ~/.ssh/known_hosts
+
+# It manually ssh to the remote server, it will be permantently added.
 $ ssh -L <port>:localhost:<port(27017)> -i ~/.ssh/<key(id_rsa)> <ssh_user(dennis)>@<host_ip>
 ```
 
@@ -156,6 +160,25 @@ Host *
 # Make sure to set proper permission
 $ chmod 600 ~/.ssh/config
 ```
+3. Config ssh on server
+
+```
+# Keep site wide ssh alive. See - https://patrickmn.com/aside/how-to-keep-alive-ssh-sessions/
+$ vim /etc/ssh/sshd_config
+  Host *
+    ServerAliveInterval 300 // 5 min
+    ServerAliveCountMax <3>
+```
+
+4. Enable autossh
+
+```
+# Install package
+$ sudo yum install autossh
+$ autossh -M(monitor) 0(disable) -f(handle following ssh options) -L <27017>:localhost:<27017> -i <full_path_to_rsa_key> <remote_user>@<remote_host> -N
+```
+
+Add the autossh command line to `/tec/rc.d/rc.local` to config it to run on start. However, it will run as root by default. We should add the remote host to root's known_hosts, or add su - <user> to run as specified user.
 
 ## Useful commands
 
