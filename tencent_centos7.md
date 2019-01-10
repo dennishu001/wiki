@@ -112,9 +112,54 @@ The repo file may include yum variables like $releasever. If incorrect variable 
 
 To view yum variables - https://unix.stackexchange.com/questions/19701/yum-how-can-i-view-variables-like-releasever-basearch-yum0
 
+## Create SSH tunnel
+
+1. Create key pair
+
+```
+# Create key pair on the client (as the user who will establish the connection)
+$ ssh-keygen -t rsa
+
+# Set permissions on private keys
+$ chmod 700 ~/.ssh // most likely already done
+$ chmod 600 ~/.ssh/id_rsa
+
+# Download and then upload the public key (id_rsa.pub) to the server (as the user will be connected) and add to the authorized_keys file
+$ cat id_rsa.pub >> ~/.ssh/authorized_keys
+# Alternatively, we can copy/pasted the public key the the authorized_keys file.
+
+# Set permissions on server
+$ chmod 700 ~/.ssh
+$ chmod 600 ~/.ssh/authorized_keys
+
+# Make sure the correct SELinux contexts are set
+$ restorecon -Rv ~/.ssh
+```
+
+2. Manually ssh to server
+
+```
+# The remote host must be added to known_hosts. It will be permantently added the first time you ssh to the server.
+$ ssh -L <port>:localhost:<port(27017)> -i ~/.ssh/<key(id_rsa)> <ssh_user(dennis)>@<host_ip>
+```
+
+If we got `bind: Cannot assign requested address`, most likely it was caused by IPv6. See - https://www.electricmonk.nl/log/2014/09/24/ssh-port-forwarding-bind-cannot-assign-requested-address/
+
+```
+# Add -4 switch to force IPv4
+$ ssh -4 -L ...
+
+# Permanently disable IPv6 by edit/create ~/.ssh/config, and add the following lines:
+Host *
+    AddressFamily inet
+
+# Make sure to set proper permission
+$ chmod 600 ~/.ssh/config
+```
+
 ## Useful commands
 
-Services
+**Services**
 
 ```
 $ systemctl [status|start|stop|restart] <service>
@@ -125,4 +170,13 @@ $ chkconfig [--level <level>] <service> <on|off>
 $ chkconfig --list // view services configured to run on start
 ```
 
+**Find if a port is open**
+
+See - https://www.thegeekdiary.com/centos-rhel-how-to-find-if-a-network-port-is-open-or-not/
+
+```
+$ netstat -tulnp
+$ ss -nutlp
+$ lsof -i
+```
 
