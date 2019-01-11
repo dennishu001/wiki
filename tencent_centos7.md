@@ -61,7 +61,45 @@ $ cat /etc/passwd
      - PasswordAuthentication no
      - UsePAM no
    $ service sshd restart
-   
+
+## Firewall
+
+In centos 7, we can use firewalld package to setup firewall. Alternatively, we can use iptables directly.
+
+Reference - https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-using-firewalld-on-centos-7
+
+```
+# Install firewalld
+$ yum install firewalld
+
+# Enable firewalld on boot
+$ systemctl enable firewalld
+$ reboot // important
+
+$ sudo firewall-cmd --state // view state
+$ firewall-cmd --get-default-zone
+$ firewall-cmd --get-active-zones
+$ firewall-cmd --list-all // list all details
+$ firewall-cmd --zone=<name> --list-services // view services
+
+# To make any change permanent, we can add --permanent. Otherwise the changes
+# made will be discarded on reboot. This make it easy to test rules.
+
+# Set active zone
+$ firewall-cmd --zone=<name> --change-interface=<eth0|eth1>
+
+# Add new port
+$ firewall-cmd --zone=<public> --add-port=<5000>/<tcp|udp>
+
+# Add service
+$ firewall-cmd --get-services
+$ firewall-cmd --zone=<name> --<add|remove>-service=<servie_name(http)>
+```
+
+**Troubleshooting**
+
+When ports are not accessable from outside, it may not be because it is blocked but the process is only listen on local interface, ie `localhost` or `127.0.0.1`.
+
 ## Create Swap file
 
 **Do not use swap on SSD**
@@ -241,3 +279,7 @@ $ lsof -i
 $ cat < /dev/tcp/<host>/<port>
 ```
 
+Response:
+
+* `Connection refused` - target machine actively rejected the connection, i.e. there's a process listening on the address but refuse to respoonse.
+* `No route to host` - there is a network problem, i.e. the address can not be accessed.
