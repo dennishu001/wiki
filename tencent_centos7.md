@@ -215,7 +215,6 @@ In order to use gm node package, we need the GraphicMagick package.
 $ yum install GraphicsMagick
 ```
 
-
 ## Useful commands
 
 **Services**
@@ -237,5 +236,8 @@ See - https://www.thegeekdiary.com/centos-rhel-how-to-find-if-a-network-port-is-
 $ netstat -tulnp
 $ ss -nutlp
 $ lsof -i
+
+# Test if remote port is accessable
+$ cat < /dev/tcp/<host>/<port>
 ```
 
