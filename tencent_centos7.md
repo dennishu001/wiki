@@ -192,13 +192,28 @@ Default mysql port is 3306.
 ```
 # Add new user to mysql
 $ > create user '<user(dennis11owen24)>'@'<host(localhost)>' identified by '<password(orson5welles6)>';
-$ >  grant all privileges on *.* to '<user(dennis11owen24)>'@'<host(localhost)>';
+$ > grant all privileges on *.* to '<user(dennis11owen24)>'@'<host(localhost)>';
 ```
 
 **Troubleshooting**
 
 * When ssh tunnel to mysql server, we may not be able to use default mysql.socks to connect to forwarded server, use -h 127.0.0.1 to specify the host.
 * We may need to add the local ip to user table. See - https://stackoverflow.com/questions/19101243/error-1130-hy000-host-is-not-allowed-to-connect-to-this-mysql-server
+
+## Nginx
+
+## nodejs
+
+## Redis
+
+## Image processing
+
+In order to use gm node package, we need the GraphicMagick package.
+
+```
+# Install GraphicsMagick by yum
+$ yum install GraphicsMagick
+```
 
 
 ## Useful commands
