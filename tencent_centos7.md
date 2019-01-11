@@ -187,6 +187,14 @@ Add the autossh command line to `/tec/rc.d/rc.local` to config it to run on star
 
 ## MySQL
 
+Default mysql port is 3306.
+
+```
+# Add new user to mysql
+$ > create user '<user(dennis11owen24)>'@'<host(localhost)>' identified by '<password(orson5welles6)>';
+$ >  grant all privileges on *.* to '<user(dennis11owen24)>'@'<host(localhost)>';
+```
+
 **Troubleshooting**
 
 * When ssh tunnel to mysql server, we may not be able to use default mysql.socks to connect to forwarded server, use -h 127.0.0.1 to specify the host.
