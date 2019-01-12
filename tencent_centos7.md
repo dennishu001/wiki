@@ -302,3 +302,5 @@ $ du -Sh | sort -rh | head -5
 # Find files only
 $ find </directory> -type f -exec du -Sh {} + | sort -rh | head -n 5
 ```
+
+Clean up /var/log/journal/ - https://bbs.archlinux.org/viewtopic.php?id=158510 and https://ma.ttias.be/clear-systemd-journal/
