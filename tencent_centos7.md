@@ -283,3 +283,22 @@ Response:
 
 * `Connection refused` - target machine actively rejected the connection, i.e. there's a process listening on the address but refuse to respoonse.
 * `No route to host` - there is a network problem, i.e. the address can not be accessed.
+
+**Disk use**
+
+https://www.tecmint.com/find-top-large-directories-and-files-sizes-in-linux/
+
+```
+# biggest directories
+$ du -a </diretory> | sort -n -r | head -n 5 // a: display all, 
+// -n: compare according to string numerical value, // -r: reverse, 
+// head: output the first part of files, -n: print the first 'n' lines.
+
+$ du -hs * | sort -rh | head -5 // human readable
+
+$ du -Sh | sort -rh | head -5
+// -h: print in human readable, -S: don't include subdirectories.
+
+# Find files only
+$ find </directory> -type f -exec du -Sh {} + | sort -rh | head -n 5
+```
