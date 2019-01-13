@@ -104,6 +104,8 @@ When ports are not accessable from outside, it may not be because it is blocked 
 
 **Do not use swap on SSD**
 
+https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-centos-7
+
 ```
 $ swapon -s
 $ free -m
