@@ -150,6 +150,10 @@ Set THP to 'never' to improve performance - http://docs.mongodb.org/manual/refer
 
 > Defrag may appeared to be <always> even when enabled is set to <never>. This can be safely ignored - https://jira.mongodb.org/browse/SERVER-18989
 
+**Crash**
+
+The main cause for unexpected crash is memory constrain. Use swapfile to increase memory capacity may help. We need to configure services to restart after crash. For centos 7+, we use `systemd`. In older versions, we may use a package like `monit`.
+
 **Troubleshooting**
 
 After installation, check service status, whether configured to run on start.
@@ -157,6 +161,27 @@ After installation, check service status, whether configured to run on start.
 The repo file may include yum variables like $releasever. If incorrect variable value causes problem, we can just replace it with hard value, like 7 for centos 7, etc.
 
 To view yum variables - https://unix.stackexchange.com/questions/19701/yum-how-can-i-view-variables-like-releasever-basearch-yum0
+
+## Auto restart services
+
+`systemd` is controlled by `.service` files in a variety of locations. However, we wanted to avoid rewriting the existing startup script. - https://singlebrook.com/2017/10/23/auto-restart-crashed-service-systemd/
+
+Tutorial - https://www.digitalocean.com/community/tutorials/how-to-configure-a-linux-service-to-start-automatically-after-a-crash-or-reboot-part-1-practical-examples
+
+https://singlebrook.com/2017/10/23/auto-restart-crashed-service-systemd/
+
+```
+# Create a new file if it's not present
+$ sudo vim /etc/systemd/system/multi-user.target.wants/<service>.service
+> [Service]
+> ...
+> Restart=always
+
+# To check the auto restart is configured successfully
+$ sudo systemctl status <service>.service // view status
+$ sudo kill -0 <PID> // kill process by PID
+$ sudo systemctl status <service>.service // should restart with a new PID
+```
 
 ## Create SSH tunnel
 
@@ -256,6 +281,14 @@ $ yum install GraphicsMagick
 ```
 
 ## Useful commands
+
+```
+# View centos version
+$ cat /etc/centos-release
+
+# Find file
+$ find <directory> -name "<match(*.any)>"
+```
 
 **Services**
 
