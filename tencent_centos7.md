@@ -126,7 +126,7 @@ $ chmod 600 /swapfile
 $ ls -lh /swapfile // check again
 $ mkswap /swapfile
 $ swapon /swapfile
-$ swapn -s // view
+$ swapon -s // view
 $ free -m
 $ vim /etc/fstab // config to make it permanent
   /swapfile swap swap sw 0 0 // add this line
