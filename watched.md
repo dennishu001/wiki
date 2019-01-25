@@ -70,7 +70,7 @@ Communication
 
 * [synapse](https://github.com/matrix-org/synapse) - distributed chat room.
 * [discourse](https://github.com/discourse/discourse) - BBS built in Ruby.
-* [mastodon](self-hosted, globally interconnected microblogging community) - self-hosted social network.
+* [mastodon](https://github.com/tootsuite/mastodon) - self-hosted social network.
 
 Presentation
 
