@@ -136,6 +136,15 @@ $ vim /etc/fstab // config to make it permanent
 
 Reference: https://www.digitalocean.com/community/tutorials/how-to-add-swap-on-centos-7
 
+Disable swap file
+
+```
+# Identify configured swap devices and files
+$ cat /proc/swaps.
+# Turn off all swap devices and files
+$ swapoff -a.
+# Remove any matching reference found in /etc/fstab.
+
 ## MongoDb
 
 Follow the official install document - https://docs.mongodb.com/v3.0/tutorial/install-mongodb-on-red-hat/
