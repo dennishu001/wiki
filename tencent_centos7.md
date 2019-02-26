@@ -210,11 +210,13 @@ $ restorecon -Rv ~/.ssh
 
 2. Add remote host to known_hosts
 
+**IMPORTANT**: we need to add remote host to root's known_hosts if we want to run autossh from rc.d because that's run as root.
+
 ```
 # Add remote to known_hosts for user
 $ ssh-keyscan <new_host_address> >> ~/.ssh/known_hosts
 
-# It manually ssh to the remote server, it will be permantently added.
+# If manually ssh to the remote server, it will be permantently added.
 $ ssh -L <port>:localhost:<port(27017)> -i ~/.ssh/<key(id_rsa)> <ssh_user(dennis)>@<host_ip>
 ```
 
@@ -248,7 +250,7 @@ $ sudo yum install autossh
 $ autossh -M(monitor) 0(disable) -f(handle following ssh options) -L <27017>:localhost:<27017> -i <full_path_to_rsa_key> <remote_user>@<remote_host> -N
 ```
 
-Add the autossh command line to `/tec/rc.d/rc.local` to config it to run on start. However, it will run as root by default. We should add the remote host to root's known_hosts, or add su - <user> to run as specified user.
+Add the autossh command line to `/etc/rc.d/rc.local` to config it to run on start. However, it will run as root by default. We should add the remote host to root's known_hosts, or add su - <user> to run as specified user.
 
 ## MySQL
 
