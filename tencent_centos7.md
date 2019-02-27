@@ -61,6 +61,7 @@ $ cat /etc/passwd
      - PasswordAuthentication no
      - UsePAM no
    $ service sshd restart
+   ```
 
 ## Firewall
 
@@ -144,6 +145,7 @@ $ cat /proc/swaps.
 # Turn off all swap devices and files
 $ swapoff -a.
 # Remove any matching reference found in /etc/fstab.
+```
 
 ## MongoDb
 
@@ -242,6 +244,7 @@ Host *
 # Make sure to set proper permission
 $ chmod 600 ~/.ssh/config
 ```
+
 3. Config ssh on server
 
 ```
