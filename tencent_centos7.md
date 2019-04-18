@@ -77,6 +77,9 @@ $ yum install firewalld
 $ systemctl enable firewalld
 $ reboot // important
 
+# Start firealld manually
+$ systemctl start firewalld
+
 $ sudo firewall-cmd --state // view state
 $ firewall-cmd --get-default-zone
 $ firewall-cmd --get-active-zones
