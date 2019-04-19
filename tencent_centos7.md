@@ -313,7 +313,24 @@ $ mysql_secure_installation
 
 ## Nginx
 
+```
+$ yun install nginx
+```
+
 ## nodejs
+
+```
+$ yum install nginx
+
+# nodejs version manager
+$ npm install n -g
+```
+
+May need to install build tool
+
+```
+$ yum -y install gcc-c++
+```
 
 ## Redis
 
