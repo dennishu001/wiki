@@ -176,6 +176,12 @@ The repo file may include yum variables like $releasever. If incorrect variable 
 
 To view yum variables - https://unix.stackexchange.com/questions/19701/yum-how-can-i-view-variables-like-releasever-basearch-yum0
 
+Make sure `/tmp/mongodb-27017.sock` is set to proper owner.
+
+```
+$ chown mongodb:mongodb /tmp/mongodb-27017.sock
+```
+
 ## Auto restart services
 
 `systemd` is controlled by `.service` files in a variety of locations. However, we wanted to avoid rewriting the existing startup script. - https://singlebrook.com/2017/10/23/auto-restart-crashed-service-systemd/
