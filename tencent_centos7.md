@@ -288,6 +288,29 @@ $ > grant all privileges on *.* to '<user(dennis11owen24)>'@'<host(localhost)>';
 * When ssh tunnel to mysql server, we may not be able to use default mysql.socks to connect to forwarded server, use -h 127.0.0.1 to specify the host.
 * We may need to add the local ip to user table. See - https://stackoverflow.com/questions/19101243/error-1130-hy000-host-is-not-allowed-to-connect-to-this-mysql-server
 
+## MariaDB
+
+https://mariadb.com/kb/en/library/yum/
+
+Create repo file:
+
+```
+$ vim /etc/yum.repos.d/MariaDB.repo
+
+[mariadb]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.1/centos7-amd64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck=1
+
+$ yum install MariaDB-server MariaDB-clinet
+$ systemctl start mariadb
+$ systemctl enable mariadb
+
+# secure
+$ mysql_secure_installation 
+```
+
 ## Nginx
 
 ## nodejs
