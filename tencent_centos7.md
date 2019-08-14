@@ -353,6 +353,21 @@ $ cat /etc/centos-release
 $ find <directory> -name "<match(*.any)>"
 ```
 
+**Update system**
+
+```
+# 1. View current centos version
+$ cat /etc/redhat-release
+# 2. Backup disk
+# 3. Check for available updates
+$ sudo yum check-update
+# 4. Cleare listing
+$ sudo yum clean all
+# sudo reboot
+# 5. Update
+$ sudo yum update
+```
+
 **Services**
 
 ```
