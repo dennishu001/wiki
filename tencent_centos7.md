@@ -351,6 +351,9 @@ $ cat /etc/centos-release
 
 # Find file
 $ find <directory> -name "<match(*.any)>"
+
+# View command by pid
+$ ps -p <pid> -o command
 ```
 
 **Update system**
